@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS trails CASCADE;
 
-CREATE TABLE (
+CREATE TABLE trails (
   id SERIAL PRIMARY KEY,
   name VARCHAR(255) not null,
   difficulty INTEGER not null,
