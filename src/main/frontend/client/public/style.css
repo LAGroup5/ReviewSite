@@ -1,3 +1,25 @@
-body {
-  background-color: red;
+
+#nav {
+  width: 100%;
+  float: left;
+  margin: 0 0 5% 0;
+  padding: 0;
+  background: #230903;
+  list-style: none;
+  animation: navbar-animation 400ms ease-in;
+}
+
+#nav li {
+  float: left;
+}
+
+#nav li a {
+  display: block;
+  padding: 8px 15px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  border-right: 1px solid;
+  margin-left: auto;
+  border-color: #230903;
 }
