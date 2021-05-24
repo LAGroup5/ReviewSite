@@ -10,5 +10,5 @@ CREATE TABLE trails (
   pass_required BOOLEAN DEFAULT false not null,
   family_friendly DEFAULT false not null,
   pet_friendly DEFAULT false not null,
-  facilities_available VARCHAR(255)[]
+  facilities_available TEXT[]
 );
