@@ -1,5 +1,6 @@
 package com.launchacademy.reviews.controllers;
 
+import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -26,7 +27,7 @@ public class TrailsApiV1Controller {
   }
 
   @GetMapping("/trails/{id}")
-  public List<Trail> getTrails(@PathVariable string id) {
+  public List<Trail> getTrails(@PathVariable String id) {
     return trailservice.findTrail(id);
   }
 
