@@ -1,5 +1,4 @@
 import React from "react"
-
 const Navbar = props => {
   return (
     <div>
@@ -10,15 +9,11 @@ const Navbar = props => {
         <li>
           <a href="#">About the Dev</a>
         </li>
-
         <li>
-          <h1>Seattle Trails</h2>
+          <h1>Seattle Trails</h1>
           </li>
-
-        </ul>
-
-        </div>
-        )
-      }
-
-        export default Navbar
+      </ul>
+    </div>
+    )
+  }
+export default Navbar
