@@ -27,7 +27,7 @@ const TrailTile = props => {
 
     return (
         <div>
-            <h2><Link to={`/trails/${id}`}>{props.trailName}</Link></h2>
+            <h2><Link to={`/trails/${props.id}`}>{props.trailName}</Link></h2>
             <p>Family Friendly: {familySafe} </p>
             <p>Pet Friendly: {petSafe}</p>
             <p>Difficulty: {difficulty}</p>

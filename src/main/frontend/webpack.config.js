@@ -6,7 +6,7 @@ module.exports = {
     path: './client/main.js'
   },
   output: {
-    path: path.join(__dirname, '../../resources/static'),
+    path: path.join(__dirname, '../resources/static'),
     filename: "bundle.js"
   },
   module: {
