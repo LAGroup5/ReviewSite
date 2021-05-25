@@ -1,4 +1,5 @@
 import React, {useState, useEffect } from "react"
+import TrailTile from "./TrailTile.js"
 
 const TrailsList = props => {
     const [trails, setTrails] = useState([])
