@@ -3,7 +3,6 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
-
 ### STS ###
 .apt_generated
 .classpath
@@ -12,13 +11,11 @@ target/
 .settings
 .springBeans
 .sts4-cache
-
 ### IntelliJ IDEA ###
 .idea
 *.iws
 *.iml
 *.ipr
-
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
@@ -28,6 +25,14 @@ target/
 build/
 !**/src/main/**/build/
 !**/src/test/**/build/
-
+### Node Modules ###
+src/main/frontend/public/bundle.js
+src/main/frontend/node_modules/*
+yarn.lock
+.DS_store
+.bundle
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 ### VS Code ###
 .vscode/
