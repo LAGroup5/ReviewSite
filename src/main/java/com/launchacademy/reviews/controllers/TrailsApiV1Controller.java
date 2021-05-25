@@ -1,10 +1,15 @@
 package com.launchacademy.reviews.controllers;
+import com.launchacademy.reviews.models.Review;
 import com.launchacademy.reviews.models.Trail;
 import com.launchacademy.reviews.services.ReviewService;
 import com.launchacademy.reviews.services.TrailService;
 import java.util.List;
+import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 @RestController
@@ -21,13 +26,14 @@ public class TrailsApiV1Controller {
   public List<Trail> getTrails() {
     return trailService.findAll();
   }
-//  @GetMapping("/trails/{id}")
-//  public List<Trail> getTrails(@PathVariable String id) {
-//    return trailService.findTrail(id);
-//  }
-//
-//  @PostMapping("/trails/{id}/new")
-//  public void addReview(@RequestBody Map<String, String> reviewMap) {
-//    return reviewService.addReview(reviewMap);
-//  }
+
+  @GetMapping("/trails/{id}")
+  public Trail getTrail(@PathVariable Integer id) {
+    return trailService.findById(id);
+  }
+
+  @PostMapping("/trails/{id}/new")
+  public Review addReview(@RequestBody Map<String, String> review) {
+    return reviewService.addReview(review);
+  }
 }
