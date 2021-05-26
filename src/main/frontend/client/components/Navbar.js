@@ -7,7 +7,7 @@ const Navbar = props => {
           <a href="/trails">Home</a>
         </li>
         <li>
-          <a href="#">About the Dev</a>
+          <a href="/aboutUs">About the Developers</a>
         </li>
         <li>
           <h1>Seattle Trails</h1>
