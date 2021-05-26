@@ -1,28 +1,60 @@
 import React, { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
+import ReviewTile from "./ReviewTile.js"
 
 const TrailShow = props => {
   const [trail, setTrail] = useState([])
+  const [reviews, setReviews] = useState([])
 
   const getTrail = async () => {
     try {
       const trailId = props.match.params.id
-      const response = await fetch(`/api/v1/trails${trailId}`)
+      const response = await fetch(`/api/v1/trails/${trailId}`)
       if (!response.ok) {
         const errorMessage = `${response.status} (${response.statusText})`
         const error = new Error(errorMessage)
         throw error
       }
       const responseBody = await response.json()
-      setTrail(responseBody.trail)
+      setTrail(responseBody)
     } catch (err) {
-      console.error(`Error in Fetch: ${err.message}`)
+      console.error(`Could not complete data fetch.`)
+    }
+  }
+
+  const getReviews = async () => {
+    try{
+      const response = await fetch("/api/v1/reviews")
+      if (!response.ok) {
+          const errMessage = `${response.status} (${response.statusText})`
+          const err = new Error(errMessage)
+          throw err
+      }
+      const responseBody = await response.json()
+      setReviews(responseBody)
+    } catch (err) {
+        console.error(`Could not complete data fetch.`)
     }
   }
 
   useEffect(() => {
     getTrail()
+    getReviews()
   }, [])
+
+//  useEffect(() => {
+//    getReviews()
+//  }, [props])
+
+  const ReviewObjectsObjects = reviews.map(review => {
+    return <ReviewTile
+      key = {review.id}
+      id = {review.id}
+      reviewName = {review.reviewName}
+      starRating = {review.starRating}
+      review = {review.review}
+    />
+  })
 
   let petFriendly
   if (trail.petFriendly) {
@@ -65,8 +97,7 @@ const TrailShow = props => {
       </div>
       <div>
         <h2>Reviews</h2>
-        <ul>
-        </ul>
+        {ReviewObjects}
       </div>
     </div>
   )
