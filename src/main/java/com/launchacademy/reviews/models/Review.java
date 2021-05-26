@@ -14,6 +14,7 @@ import javax.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import net.minidev.json.JSONUtil;
 
 @Entity
 @Table(name = "reviews")
@@ -38,4 +39,11 @@ public class Review {
   @JoinColumn(name = "trail_id")
   @JsonIgnore
   private Trail trail;
+
+  public Trail getTrail() {
+    return trail;
+  }
+  public void setTrail(Trail trail) {
+    this.trail = trail;
+  }
 }

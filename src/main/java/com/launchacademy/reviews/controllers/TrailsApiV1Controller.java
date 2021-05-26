@@ -46,8 +46,8 @@ public class TrailsApiV1Controller {
     return reviewService.findAllByTrailId(id);
   }
 
-  @PostMapping("/trails/{id}/review")
-  public Review addReview(@RequestBody Map<String, String> review) {
-    return reviewService.addReview(review);
+  @PostMapping("/trails/{trailId}/review")
+  public Review addReview(@PathVariable Integer trailId, @RequestBody Map<String, String> review) {
+    return reviewService.addReview(trailId, review);
   }
 }
