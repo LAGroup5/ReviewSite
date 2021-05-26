@@ -21,7 +21,7 @@ public class TrailsApiV1Controller {
   private ReviewService reviewService;
   private DeveloperService developerService;
   @Autowired
-  public TrailsApiV1Controller (TrailService trailService, ReviewService reviewService, DeveloperService developerService) {
+  public TrailsApiV1Controller (TrailService trailService, ReviewService reviewService, DeveloperService developerService){
     this.trailService = trailService;
     this.reviewService = reviewService;
     this.developerService = developerService;
@@ -41,8 +41,10 @@ public class TrailsApiV1Controller {
     return developerService.findAll();
   }
 
-//  @GetMapping("/trails/{id}/review")
-//  public Review
+  @GetMapping("/trails/{id}/all-reviews")
+  public List<Review> getTrailReviews(@PathVariable Integer id) {
+    return reviewService.findAllByTrailId(id);
+  }
 
   @PostMapping("/trails/{id}/review")
   public Review addReview(@RequestBody Map<String, String> review) {

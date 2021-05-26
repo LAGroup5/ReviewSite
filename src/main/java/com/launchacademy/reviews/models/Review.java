@@ -1,4 +1,6 @@
 package com.launchacademy.reviews.models;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -12,12 +14,14 @@ import javax.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
 @Entity
-@Table(name="reviews")
+@Table(name = "reviews")
 @NoArgsConstructor
 @Getter
 @Setter
 public class Review {
+
   @Id
   @SequenceGenerator(name = "reviews_generator", sequenceName = "reviews_id_seq", allocationSize = 1)
   @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "reviews_generator")
@@ -27,12 +31,11 @@ public class Review {
   private String reviewerName;
   @Column(name = "star_rating", nullable = false)
   private Integer starRating;
-  @Column(name = "review")
-  private String review;
-  //  @Column(name = "trail_id", nullable = false)
-//  private String trailId;
+  @Column(name = "body")
+  private String body;
+
   @ManyToOne
   @JoinColumn(name = "trail_id")
-  @JsonIgnoreProperties
+  @JsonIgnore
   private Trail trail;
 }

@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface TrailRepository extends CrudRepository<Trail, Integer> {
-
+  public Trail findByName(String name);
 }
