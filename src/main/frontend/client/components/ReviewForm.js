@@ -13,7 +13,7 @@ const ReviewForm = props => {
 
    const addNewReview = async () => {
        try {
-         const response = await fetch("/api/v1/trails/{id}/new", {
+         const response = await fetch("/api/v1/trails/{id}/review", {
            method: "POST",
            headers: new Headers({
              "Content-Type": "application/json"
