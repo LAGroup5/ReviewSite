@@ -21,9 +21,10 @@ public class TrailsApiV1Controller {
   private ReviewService reviewService;
   private DeveloperService developerService;
   @Autowired
-  public TrailsApiV1Controller (TrailService trailService, ReviewService reviewService) {
+  public TrailsApiV1Controller (TrailService trailService, ReviewService reviewService, DeveloperService developerService) {
     this.trailService = trailService;
     this.reviewService = reviewService;
+    this.developerService = developerService;
   }
   @GetMapping("/trails")
   public List<Trail> getTrails() {
