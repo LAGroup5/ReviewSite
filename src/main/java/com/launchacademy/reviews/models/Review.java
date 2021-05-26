@@ -1,7 +1,6 @@
 package com.launchacademy.reviews.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,7 +13,6 @@ import javax.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import net.minidev.json.JSONUtil;
 
 @Entity
 @Table(name = "reviews")
@@ -43,6 +41,7 @@ public class Review {
   public Trail getTrail() {
     return trail;
   }
+
   public void setTrail(Trail trail) {
     this.trail = trail;
   }
