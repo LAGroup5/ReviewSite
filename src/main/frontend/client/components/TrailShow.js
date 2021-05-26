@@ -15,6 +15,7 @@ const TrailShow = (props) => {
     try {
       const trailId = props.match.params.id;
       const response = await fetch(`/api/v1/trails/${trailId}`);
+
       if (!response.ok) {
         const errorMessage = `${response.status} (${response.statusText})`;
         const error = new Error(errorMessage);
@@ -28,8 +29,8 @@ const TrailShow = (props) => {
   };
 
   const getReviews = async () => {
-    try {
-      const response = await fetch("/api/v1/reviews");
+    try{
+      const response = await fetch("/api/v1/trails/{trailId}/all-reviews")
       if (!response.ok) {
         const errMessage = `${response.status} (${response.statusText})`;
         const err = new Error(errMessage);

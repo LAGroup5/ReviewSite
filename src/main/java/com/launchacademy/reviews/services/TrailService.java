@@ -7,16 +7,22 @@ import org.springframework.stereotype.Service;
 @Service
 public class TrailService {
   private TrailRepository trailRepo;
+
   @Autowired
   public TrailService(TrailRepository trailRepo) {
     this.trailRepo = trailRepo;
   }
+
   public List<Trail> findAll() {
-    return (List<Trail>) trailRepo.findAll();
+    return (List<Trail>) this.trailRepo.findAll();
   }
+
   public Trail findById(Integer id) {
     return this.trailRepo.findById(id).get();
   }
+
+  public Trail findByName(String name) { return this.trailRepo.findByName(name); }
+
   public void save(Trail trail) {
     this.trailRepo.save(trail);
   }

@@ -5,11 +5,10 @@ const ReviewForm = (props) => {
   const defaultFormValues = {
     reviewerName: "",
     starRating: "",
-    review: "",
-  };
-  const [newReview, setNewReview] = useState(defaultFormValues);
-  const [formSubmitted, setFormSubmitted] = useState(false);
-  const [redirect, setRedirect] = useState(false);
+    body: ""
+   }
+   const [newReview, setNewReview] = useState(defaultFormValues)
+   const [formSubmitted, setFormSubmitted] = useState(false)
 
   const addNewReview = async () => {
     try {
@@ -82,14 +81,13 @@ const ReviewForm = (props) => {
         </label>
         <br />
 
-        <label htmlFor="review">
+        <label htmlFor="body">
           Review:
-          <textarea
-            name="review"
-            id="review"
-            rows="5"
-            cols="33"
-            value={newReview.review}
+        <textarea
+            name="body"
+            id="body"
+            rows="5" cols="33"
+            value={newReview.body}
             onChange={handleChange}
           />
         </label>

@@ -2,7 +2,9 @@ package com.launchacademy.reviews.services;
 
 
 import com.launchacademy.reviews.models.Review;
+import com.launchacademy.reviews.models.Trail;
 import com.launchacademy.reviews.repositories.ReviewRepository;
+import java.util.List;
 import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,8 +22,20 @@ public class ReviewService {
   public Review addReview(Map<String, String> review) {
     Review newReview = new Review();
     newReview.setReviewerName(review.get("reviewerName"));
-    newReview.setReview(review.get("review"));
+    newReview.setBody(review.get("review"));
     newReview.setStarRating(Integer.parseInt(review.get("starRating")));
-    return reviewRepository.save(newReview);
+    return this.reviewRepository.save(newReview);
+  }
+
+  public List<Review> findAll() {
+    return (List<Review>) this.reviewRepository.findAll();
+  }
+
+  public List<Review> findAllByTrailId(Integer id) {
+    return this.reviewRepository.findAllByTrailId(id);
+  }
+
+  public void save(Review review) {
+    this.reviewRepository.save(review);
   }
 }
