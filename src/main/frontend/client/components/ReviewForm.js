@@ -13,6 +13,7 @@ const ReviewForm = (props) => {
   const addNewReview = async () => {
     try {
       const id = props.id;
+      const trailId = props.trailId;
       const response = await fetch(`/api/v1/trails/${id}/review`, {
         method: "POST",
         headers: new Headers({

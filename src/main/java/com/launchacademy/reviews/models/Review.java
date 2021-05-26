@@ -1,7 +1,6 @@
 package com.launchacademy.reviews.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -38,4 +37,12 @@ public class Review {
   @JoinColumn(name = "trail_id")
   @JsonIgnore
   private Trail trail;
+
+  public Trail getTrail() {
+    return trail;
+  }
+
+  public void setTrail(Trail trail) {
+    this.trail = trail;
+  }
 }
