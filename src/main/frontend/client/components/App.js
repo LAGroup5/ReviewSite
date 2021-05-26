@@ -6,6 +6,7 @@ import NavBar from "./Navbar.js";
 import ReviewForm from "./ReviewForm.js";
 import { hot } from "react-hot-loader/root";
 import TrailShow from "./TrailShow.js";
+import DevelopersList from "./DevelopersList.js";
 
 const App = (props) => {
   return (
@@ -18,6 +19,7 @@ const App = (props) => {
         <Route exact path="/trails" component = {TrailsList} />
         <Route exact path="/trails/:id" component = {TrailShow} />
         <Route exact path="/trails/:id/review" component = {ReviewForm} />
+        <Route exact path="/aboutUs" component = {DevelopersList} />
       </Switch>
     </BrowserRouter>
   );
