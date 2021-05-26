@@ -32,7 +32,10 @@ public class TrailsApiV1Controller {
     return trailService.findById(id);
   }
 
-  @PostMapping("/trails/{id}/new")
+//  @GetMapping("/trails/{id}/review")
+//  public Review
+
+  @PostMapping("/trails/{id}/review")
   public Review addReview(@RequestBody Map<String, String> review) {
     return reviewService.addReview(review);
   }

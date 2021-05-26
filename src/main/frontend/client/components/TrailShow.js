@@ -91,7 +91,7 @@ const TrailShow = props => {
           <li>Pet Friendly: {petFriendly}</li>
           <li>{passesRequired}</li>
         </ul>
-      <div>
+      </div>
       <div>
         <Link to={`/trails/${trail.id}/review`}>Add A Review</Link>
       </div>
