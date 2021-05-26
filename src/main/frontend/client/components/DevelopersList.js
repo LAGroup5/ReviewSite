@@ -33,7 +33,7 @@ const DevelopersList = props => {
 
     return (
         <div>
-            {developersCards}
+            {developerCards}
         </div>
     )
 }

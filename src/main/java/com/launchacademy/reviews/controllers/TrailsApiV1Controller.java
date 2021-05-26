@@ -1,6 +1,8 @@
 package com.launchacademy.reviews.controllers;
+import com.launchacademy.reviews.models.Developer;
 import com.launchacademy.reviews.models.Review;
 import com.launchacademy.reviews.models.Trail;
+import com.launchacademy.reviews.services.DeveloperService;
 import com.launchacademy.reviews.services.ReviewService;
 import com.launchacademy.reviews.services.TrailService;
 import java.util.List;
@@ -17,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class TrailsApiV1Controller {
   private TrailService trailService;
   private ReviewService reviewService;
+  private DeveloperService developerService;
   @Autowired
   public TrailsApiV1Controller (TrailService trailService, ReviewService reviewService) {
     this.trailService = trailService;
@@ -30,6 +33,11 @@ public class TrailsApiV1Controller {
   @GetMapping("/trails/{id}")
   public Trail getTrail(@PathVariable Integer id) {
     return trailService.findById(id);
+  }
+
+  @GetMapping("/aboutUs")
+  public List<Developer> getDevelopers() {
+    return developerService.findAll();
   }
 
 //  @GetMapping("/trails/{id}/review")
