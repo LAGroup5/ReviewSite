@@ -17,8 +17,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class TrailsApiV1Controller {
   private TrailService trailService;
   private ReviewService reviewService;
+
   @Autowired
-  public TrailsApiV1Controller (TrailService trailService, ReviewService reviewService) {
+  public TrailsApiV1Controller(TrailService trailService, ReviewService reviewService) {
     this.trailService = trailService;
     this.reviewService = reviewService;
   }
@@ -32,8 +33,10 @@ public class TrailsApiV1Controller {
     return trailService.findById(id);
   }
 
-//  @GetMapping("/trails/{id}/review")
-//  public Review
+  @GetMapping("/trails/{id}/all-reviews")
+  public List<Review> getTrailReviews(@PathVariable Integer id) {
+    return reviewService.findAllByTrailId(id);
+  }
 
   @PostMapping("/trails/{id}/review")
   public Review addReview(@RequestBody Map<String, String> review) {

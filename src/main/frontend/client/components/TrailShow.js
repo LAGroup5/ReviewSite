@@ -5,10 +5,10 @@ import ReviewTile from "./ReviewTile.js"
 const TrailShow = props => {
   const [trail, setTrail] = useState([])
   const [reviews, setReviews] = useState([])
+  const trailId = props.match.params.id
 
   const getTrail = async () => {
     try {
-      const trailId = props.match.params.id
       const response = await fetch(`/api/v1/trails/${trailId}`)
       if (!response.ok) {
         const errorMessage = `${response.status} (${response.statusText})`
@@ -24,7 +24,7 @@ const TrailShow = props => {
 
   const getReviews = async () => {
     try{
-      const response = await fetch("/api/v1/reviews")
+      const response = await fetch("/api/v1/trails/{trailId}/all-reviews")
       if (!response.ok) {
           const errMessage = `${response.status} (${response.statusText})`
           const err = new Error(errMessage)
@@ -52,7 +52,7 @@ const TrailShow = props => {
       id = {review.id}
       reviewName = {review.reviewName}
       starRating = {review.starRating}
-      review = {review.review}
+      review = {review.body}
     />
   })
 

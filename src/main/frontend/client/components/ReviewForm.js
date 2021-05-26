@@ -5,7 +5,7 @@ const ReviewForm = props => {
   const defaultFormValues = {
     reviewerName: "",
     starRating: "",
-    review: ""
+    body: ""
 
    }
    const [newReview, setNewReview] = useState(defaultFormValues)
@@ -75,13 +75,13 @@ const ReviewForm = props => {
           />
         </label>
 
-        <label htmlFor="review">
+        <label htmlFor="body">
           Review:
         <textarea
-            name="review"
-            id="review"
+            name="body"
+            id="body"
             rows="5" cols="33"
-            value={newReview.review}
+            value={newReview.body}
             onChange={handleChange}
           />
         </label>
