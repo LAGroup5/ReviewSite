@@ -11,11 +11,13 @@ const App = (props) => {
   return (
     <BrowserRouter>
       <NavBar />
-      <ReviewForm />
       <Switch>
-        <Route exact path="/trails" component={TrailsList} />
-        <Route exact path="/trails/:id" component={TrailShow} />
-        <Route exact path="/trails/:id/review" component= {ReviewForm} />
+        <Route exact path="/">
+          <Redirect to="/trails" />
+        </Route>
+        <Route exact path="/trails" component = {TrailsList} />
+        <Route exact path="/trails/:id" component = {TrailShow} />
+        <Route exact path="/trails/:id/review" component = {ReviewForm} />
       </Switch>
     </BrowserRouter>
   );
