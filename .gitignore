@@ -26,7 +26,7 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 ### Node Modules ###
-src/main/frontend/public/bundle.js
+src/main/resources/static/bundle.js
 src/main/frontend/node_modules/*
 yarn.lock
 .DS_store
