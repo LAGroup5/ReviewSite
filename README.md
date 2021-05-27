@@ -1,4 +1,4 @@
-Seattle Trails Review Site
+Seattle Trails Review Site (Version: 1.0)
 
 This web app is developed as a final group project which is part the fullfullment of the Launch Academy software development program. Launch Academy is a Boston based coding bootcamp focusing on web development.
 
