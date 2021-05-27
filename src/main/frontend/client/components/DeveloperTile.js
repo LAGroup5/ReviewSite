@@ -1,14 +1,13 @@
-import React from "react"
+import React from "react";
 
-const DeveloperTile = props => {
+const DeveloperTile = (props) => {
+  return (
+    <div className="devCards">
+      <h2 className="devName">{props.devName}</h2>
+      <img className="devImg" src={props.devImg}></img>
+      <p className="aboutDev">{props.aboutDev}</p>
+    </div>
+  );
+};
 
-    return (
-        <div class = "devCards">
-            <h2 class = "devName">{props.devName}</h2>
-            <img class = "devImg" src = {props.devImg}></img>
-            <p class="aboutDev">{props.aboutDev}</p>
-        </div>
-    )
-}
-
-export default DeveloperTile
+export default DeveloperTile;
