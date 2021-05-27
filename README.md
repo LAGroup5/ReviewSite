@@ -1,4 +1,4 @@
-Seattle Trails Review Site (Version: 1.0)
+**Seattle Trails Review Site (Version: 1.0)**
 
 This web app is developed as a final group project which is part the fullfullment of the Launch Academy software development program. Launch Academy is a Boston based coding bootcamp focusing on web development.
 
@@ -43,7 +43,7 @@ How to run this project on your local machine:
             - ./mvnw spring-boot:run
 5. In your browser, Navigate to localhost 8080. See Home controller for all possible routes.
 
-** Planning our app: **
+**Planning our app:**
 
 ER Diagram:
 
