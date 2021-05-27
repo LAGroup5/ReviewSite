@@ -1,74 +1,74 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import ReviewTile from "./ReviewTile.js";
-import ReviewForm from "./ReviewForm.js";
-import SuccessTile from "./SuccessTile.js";
+import React, { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
+import ReviewTile from "./ReviewTile.js"
+import ReviewForm from "./ReviewForm.js"
+import SuccessTile from "./SuccessTile.js"
 
 const TrailShow = (props) => {
-  const [trail, setTrail] = useState([]);
-  const [reviews, setReviews] = useState([]);
-  const [showReviewForm, setReviewShowForm] = useState(false);
-  const [afterSubmission, setAfterSubmission] = useState(false);
-  const [showResponse, setShowResponse] = useState(null);
+  const [trail, setTrail] = useState([])
+  const [reviews, setReviews] = useState([])
+  const [showReviewForm, setReviewShowForm] = useState(false)
+  const [afterSubmission, setAfterSubmission] = useState(false)
+  const [showResponse, setShowResponse] = useState(null)
+  const trailId = props.match.params.id
 
   const getTrail = async () => {
     try {
-      const trailId = props.match.params.id;
-      const response = await fetch(`/api/v1/trails/${trailId}`);
-
+      const response = await fetch(`/api/v1/trails/${trailId}`)
       if (!response.ok) {
-        const errorMessage = `${response.status} (${response.statusText})`;
-        const error = new Error(errorMessage);
-        throw error;
+        const errorMessage = `${response.status} (${response.statusText})`
+        const error = new Error(errorMessage)
+        throw error
       }
-      const responseBody = await response.json();
-      setTrail(responseBody);
+      const responseBody = await response.json()
+      setTrail(responseBody)
     } catch (err) {
-      console.error(`Could not complete data fetch.`);
+      console.error(`Could not complete data fetch.`)
     }
-  };
+  }
 
   const getReviews = async () => {
     try{
-      const response = await fetch("/api/v1/trails/{trailId}/all-reviews")
+      const response = await fetch(`/api/v1/trails/${trailId}/all-reviews`)
       if (!response.ok) {
-        const errMessage = `${response.status} (${response.statusText})`;
-        const err = new Error(errMessage);
-        throw err;
+        const errMessage = `${response.status} (${response.statusText})`
+        const err = new Error(errMessage)
+        throw err
       }
-      const responseBody = await response.json();
-      setReviews(responseBody);
+      const responseBody = await response.json()
+      setReviews(responseBody)
     } catch (err) {
-      console.error(`Could not complete data fetch.`);
+      console.error(`Could not complete data fetch`)
     }
-  };
+  }
 
   useEffect(() => {
-    getTrail();
-  }, [props]);
+    getTrail()
+    getReviews()
+  }, [props])
 
   const showNewReviewForm = (event) => {
-    event.preventDefault();
-    setReviewShowForm(true);
-  };
+    event.preventDefault()
+    setReviewShowForm(true)
+  }
 
   const handleWhatToShow = () => {
-    setAfterSubmission(true);
-  };
+    setAfterSubmission(true)
+  }
 
-  let reviewFormDisplay = "";
+  let reviewFormDisplay = ""
   if (showReviewForm) {
     reviewFormDisplay = (
       <ReviewForm
         id={props.match.params.id}
         handleWhatToShow={handleWhatToShow}
       />
-    );
+    )
   }
 
-  let whatToShow = "";
+  let whatToShow = ""
   if (afterSubmission) {
-    whatToShow = <SuccessTile />;
+    whatToShow = <SuccessTile />
   } else {
     whatToShow = (
       <div>
@@ -77,7 +77,7 @@ const TrailShow = (props) => {
         </button>
         {reviewFormDisplay}
       </div>
-    );
+    )
   }
 
   const ReviewObjects = reviews.map((review) => {
@@ -85,32 +85,32 @@ const TrailShow = (props) => {
       <ReviewTile
         key={review.id}
         id={review.id}
-        reviewName={review.reviewName}
+        reviewerName={review.reviewerName}
         starRating={review.starRating}
-        review={review.review}
+        body={review.body}
       />
-    );
-  });
+    )
+  })
 
-  let petFriendly;
+  let petFriendly
   if (trail.petFriendly) {
-    petFriendly = "Yes";
+    petFriendly = "Yes"
   } else {
-    petFriendly = "No";
+    petFriendly = "No"
   }
 
-  let familyFriendly;
+  let familyFriendly
   if (trail.familyFriendly) {
-    familyFriendly = "Yes";
+    familyFriendly = "Yes"
   } else {
-    familyFriendly = "No";
+    familyFriendly = "No"
   }
 
-  let passesRequired;
+  let passesRequired
   if (trail.passesRequired) {
-    passesRequired = "Pass Required For Entry";
+    passesRequired = "Pass Required For Entry"
   } else {
-    passesRequired = "Free Entry, No Pass Required";
+    passesRequired = "Free Entry, No Pass Required"
   }
 
   return (
@@ -134,7 +134,7 @@ const TrailShow = (props) => {
         {ReviewObjects}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default TrailShow;
+export default TrailShow
