@@ -25,12 +25,16 @@ public class DeveloperSeeder implements CommandLineRunner {
     Developer ashlyn = new Developer(
         "Ashlyn Morin",
         "https://i.postimg.cc/QC6qHbdF/Ashlyn300.jpg",
-        "Hi, I'm Ashlyn and I am a Software developer with a passion for creating programs\n"
-            + "that have practical life applications and relieve some of the burden of business\n"
-            + "for small business. Years of being in the customer service industry make me a\n"
-            + "great asset when it comes to consumer relations, troubleshooting, communication and\n"
-            + "customer-focused service. Experience in Java, JavaScript, HTML, CSS, SQL, React,\n"
-            + "Android development."
+        "Hi, I'm Ashlyn and I am a Software developer\n"
+        +"with a passion for creating programs that have\n"
+        +"practical life applications and relieve some of\n"
+        +"the burden of business for small business.\n"
+        +"Years of being in the customer service industry\n"
+        +"make me a great asset when it comes to consumer\n"
+        +"relations, troubleshooting, communication and\n"
+        +"customer-focused service.\n"
+        +"Experience in Java, JavaScript, HTML, CSS, SQL,\n"
+        +"React, Android development."
 
     );
     developerList.add(ashlyn);
@@ -38,26 +42,30 @@ public class DeveloperSeeder implements CommandLineRunner {
     Developer steve = new Developer(
         "Steve Taylor",
         "https://i.postimg.cc/Gh5QRqfN/Steve300.png",
-        "Steve is experienced with working on large software projects. His passion is in\n"
-            + "identifying and removing bottlenecks and inefficiencies through debugging,\n"
-            + "monitoring and troubleshooting. He is looking forward to the next challenge to\n"
-            + "tackle!"
+        "Steve is experienced with working on large software\n"
+         +"projects. His passion is in identifying and removing\n"
+         +"bottlenecks and inefficiencies through debugging,\n"
+        +"monitoring and troubleshooting. He is looking forward\n"
+        +"to the next challenge to tackle!"
     );
     developerList.add(steve);
 
     Developer paul = new Developer(
         "Paul",
         "https://i.postimg.cc/RhCRS84r/Paul300.jpg",
-        "Paul is an experienced software developer, always willing to tackle new challenges."
+        "Paul is an experienced software developer,\n"
+         +"experienced in automation, and always willing to tackle\n"
+         +"new challenges."
     );
     developerList.add(paul);
 
     Developer ami = new Developer(
         "Ami Drammeh",
         "https://i.postimg.cc/vHBzCp0f/Ami300.png",
-        "Ami here! I am a software developer who is passionate about learning,\n"
-            + "constantly improving my skills and community building. I have a positive\n"
-            + "mindset and love bringing creativity to technology."
+        "Ami here! I am a software developer who is passionate\n"
+         +"aboutlearning,constantly improving my skills and\n"
+         +"community building. I have a positive mindset and love\n"
+         +"bringing creativity to technology."
 
     );
     developerList.add(ami);
@@ -65,8 +73,9 @@ public class DeveloperSeeder implements CommandLineRunner {
     Developer sina = new Developer(
         "Sinafikesh Mitiku",
         "https://i.postimg.cc/RFLdz9rQ/Sina300.jpg",
-        "I am Sina, a technology professional working as a Software Developer, experienced in\n"
-            + "SQL, relational databases and Business Intelligence and passionate about data."
+        "I am Sina, a technology professional working as a Software\n"
+         +"Developer, experienced in SQL, relational databases and\n"
+         +"Business Intelligence and I am passionate about data."
     );
     developerList.add(sina);
 

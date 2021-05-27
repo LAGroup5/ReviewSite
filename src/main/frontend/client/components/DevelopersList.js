@@ -32,7 +32,7 @@ const DevelopersList = props => {
     })
 
     return (
-        <div>
+        <div class = "developers">
             {developerCards}
         </div>
     )
