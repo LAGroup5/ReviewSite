@@ -43,7 +43,7 @@ How to run this project on your local machine:
             - ./mvnw spring-boot:run
 5. In your browser, Navigate to localhost 8080. See Home controller for all possible routes.
 
-Planning our app:
+** Planning our app: **
 
 ER Diagram:
 
