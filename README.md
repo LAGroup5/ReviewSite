@@ -45,10 +45,15 @@ How to run this project on your local machine:
 
 Planning our app:
 
+ER Diagram:
 
 ![ER Diagram:](/gitHubResources/ER_diagram.PNG)
 
+React Component Tree:
+
 ![React Component Tree:](/gitHubResources/react_component_tree.PNG)
+
+User Stories:
 
 ![User Stories:](/gitHubResources/User_stories.PNG)
 
