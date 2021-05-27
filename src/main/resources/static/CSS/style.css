@@ -1,16 +1,19 @@
-
+body {
+width: 100%;
+}
 #nav {
     width: 100%;
     float: left;
     margin: 0 0 5% 0;
-    padding: 0;
-    background: #230903;
+    padding: 10px;
+    background: #ddbea9;
     list-style: none;
     animation: navbar-animation 400ms ease-in;
   }
 
   #nav li {
     float: left;
+    list-style: none;
   }
 
   #nav li a {
@@ -23,3 +26,54 @@
     margin-left: auto;
     border-color: #230903;
   }
+
+  #nav h1 {
+  text-align: center;
+
+  }
+
+ .new-review {
+   padding: 10px;
+   width: 60%;
+   margin-top: 2em;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   border-radius: 5px;
+   background-color: #ede0d4;
+   padding: 20px;
+   margin: auto;
+ }
+
+input[type=text], select {
+  width: 500px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea {
+width: 500px;
+margin: auto;
+	height: 120px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 5px;
+	font-family: Tahoma, sans-serif;
+
+}
+.button {
+  background-color: #ede0d4;
+  padding: 14px 20px;
+    margin: 8px 0;
+    border: 1px solid #b08968;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+
+
+
