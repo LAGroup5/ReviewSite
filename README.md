@@ -5,7 +5,7 @@ This web app is developed as a final group project which is part the fullfullmen
 This web site is a place where users can add a review about any trail located in the Seattle area. Users can navigate to specific trail and enter a review about that trail using the form that is displayed by clicking the 'add review' button at the bottom of the Trail informtion. Contents of the review include name of reviewer, star rating and text content of the review.
 
 Creators:
-- Ashyln Morin
+- Ashlyn Morin
 - Steve Taylor
 - Ami Drammeh
 - Paul Ritzman
