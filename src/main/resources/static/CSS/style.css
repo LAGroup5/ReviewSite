@@ -1,49 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;1,100&display=swap");
+
 body {
-width: 100%;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
 }
 #nav {
-    width: 100%;
-    float: left;
-    margin: 0 0 5% 0;
-    padding: 10px;
-    background: #ddbea9;
-    list-style: none;
-    animation: navbar-animation 400ms ease-in;
-  }
+  width: 100%;
+  margin: 0 0 5% 0;
+  padding: 10px;
+  background: #ddbea9;
+  list-style: none;
+  animation: navbar-animation 400ms ease-in;
+}
 
-  #nav li {
-    float: left;
-    list-style: none;
-  }
+#nav li {
+  float: left;
+  list-style: none;
+}
 
-  #nav li a {
-    display: block;
-    padding: 8px 15px;
-    text-decoration: none;
-    font-weight: bold;
-    color: white;
-    border-right: 1px solid;
-    margin-left: auto;
-    border-color: #230903;
-  }
+#nav li a {
+  display: block;
+  padding: 8px 15px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  border-right: 1px solid;
+  margin-left: auto;
+  border-color: #230903;
+}
 
-  #nav h1 {
+#nav h1 {
   text-align: center;
+}
 
-  }
+.new-review {
+  width: 45%;
+  margin-top: 2em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+  background-color: #ede0d4;
+  padding: 20px;
+  margin: auto;
+}
 
- .new-review {
-   padding: 10px;
-   width: 60%;
-   margin-top: 2em;
-   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-   border-radius: 5px;
-   background-color: #ede0d4;
-   padding: 20px;
-   margin: auto;
- }
+.inputGroup {
+  margin: auto;
+  width: 40%;
+}
 
-input[type=text], select {
+input[type="text"],
+select {
   width: 500px;
   padding: 12px 20px;
   margin: 8px 0;
@@ -54,23 +60,22 @@ input[type=text], select {
 }
 
 textarea {
-width: 500px;
-margin: auto;
-	height: 120px;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	padding: 5px;
-	font-family: Tahoma, sans-serif;
-
+  width: 500px;
+  margin: auto;
+  height: 120px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px;
+  font-family: Tahoma, sans-serif;
 }
 .button {
   background-color: #ede0d4;
   padding: 14px 20px;
-    margin: 8px 0;
-    border: 1px solid #b08968;
-    border-radius: 4px;
-    cursor: pointer;
-    text-align: center;
+  margin: 8px 0;
+  border: 1px solid #b08968;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
 }
 
 .developers {
@@ -104,7 +109,22 @@ margin: auto;
   text-align: center;
 }
 
+.trail-column-style {
+  font-weight: normal;
+}
 
+.trail-body {
+  font-weight: normal;
+}
 
+.trail-head-left {
+  text-align: left;
+}
 
+.trail-details-left {
+  text-align: left;
+}
 
+.review-star-rating {
+  padding-left: 20px;
+}

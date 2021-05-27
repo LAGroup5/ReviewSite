@@ -60,8 +60,10 @@ const ReviewForm = (props) => {
   if (!formSubmitted) {
     return (
        <form className="new-review" onSubmit={handleSubmit}>
+       <div className="inputGroup">
         <label htmlFor="name">
           Your Name:
+             </label>
           <input
             name="reviewerName"
             id="reviewerName"
@@ -69,10 +71,12 @@ const ReviewForm = (props) => {
             value={newReview.reviewerName}
             onChange={handleChange}
           />
-        </label>
-
+          <p className="errorForm"></p>
+     </div>
+        <div className="inputGroup">
         <label htmlFor="rating">
           Rating:
+          </label>
           <input
             type="text"
             name="starRating"
@@ -80,11 +84,13 @@ const ReviewForm = (props) => {
             value={newReview.starRating}
             onChange={handleChange}
           />
-        </label>
+          </div>
 
 
+<div className="inputGroup">
         <label htmlFor="body"><br />
           Review: <br/>
+          </label>
         <textarea
             name="body"
             id="body"
@@ -92,9 +98,10 @@ const ReviewForm = (props) => {
             value={newReview.body}
             onChange={handleChange}
           />
-        </label>
+          </div>
 
-         <div>
+
+         <div className= "inputGroup">
           <input className="button" type="submit" value="Submit Review" />
         </div>
       </form>
