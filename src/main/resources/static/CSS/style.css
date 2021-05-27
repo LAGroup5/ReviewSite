@@ -78,6 +78,37 @@ textarea {
   text-align: center;
 }
 
+.developers {
+  margin-top:3em;
+}
+.devCards {
+  background-color: #ede0d4;
+  border:1px solid #ccc;
+  border-radius: 4px;
+  width: 30%;
+  margin: 0 auto;
+  padding: 3em;
+  margin-top: 3em;
+}
+
+.devName {
+  text-align: center;
+}
+
+.devImg {
+
+  border: 1px solid #230903;
+  border-radius: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:50%;
+}
+
+.aboutDev{
+  text-align: center;
+}
+
 .trail-column-style {
   font-weight: normal;
 }
