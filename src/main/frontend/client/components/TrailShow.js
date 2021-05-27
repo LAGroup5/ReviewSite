@@ -69,6 +69,7 @@ const TrailShow = (props) => {
   let whatToShow = ""
   if (afterSubmission) {
     whatToShow = <SuccessTile />
+    window.location.reload(false);
   } else {
     whatToShow = (
       <div>
