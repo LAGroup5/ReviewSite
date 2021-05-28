@@ -37,7 +37,7 @@ const TrailsList = (props) => {
   });
 
   return (
-    <div>
+    <div className= "trails-table">
       <table>
         <colgroup>
           <col style={{ width: 300 }}></col>

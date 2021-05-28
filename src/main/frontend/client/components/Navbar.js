@@ -1,19 +1,26 @@
 import React from "react"
 const Navbar = props => {
   return (
-    <div id="nav">
+
+    <div id= "nav">
+    <a href="/" className="brand">
+          <h1>Seattle Trails</h1>
+        </a>
+
       <ul>
         <li>
-          <a href="/trails">Home</a>
+          <a href="/trails">HOME</a>
         </li>
         <li>
-          <a href="/aboutUs">About the Developers</a>
+          <a href="/aboutUs">ABOUT US</a>
         </li>
 
+
         </ul>
-    <h1 id="sea-trails">Seattle Trails</h1>
 
     </div>
+
+
     )
   }
 export default Navbar
