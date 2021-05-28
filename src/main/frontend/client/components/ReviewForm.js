@@ -99,7 +99,7 @@ const ReviewForm = (props) => {
           <textarea
             name="body"
             id="body"
-            rows="5" cols="33"
+            rows="5" cols="31"
             value={newReview.body}
             onChange={handleChange}
           />
