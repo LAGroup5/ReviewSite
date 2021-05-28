@@ -11,8 +11,9 @@ Creators:
 - Paul Ritzman
 - Sina Mitiku
 
-Other contributors:
+Other contributors/resources:
 - Evan DuBois - EE at Launch Academy
+- https://cssgenerator.org/box-shadow-css-generator.html
 
 Tools and frameworks used:
 - React front-end

@@ -49,6 +49,9 @@ const ReviewForm = (props) => {
   };
 
   const handleSubmit = (event) => {
+    if (newReview.starRating === "") {
+      newReview.starRating = 5
+    }
     event.preventDefault();
     addNewReview(newReview);
   };
@@ -59,11 +62,11 @@ const ReviewForm = (props) => {
 
   if (!formSubmitted) {
     return (
-       <form className="new-review" onSubmit={handleSubmit}>
-       <div className="inputGroup">
-        <label htmlFor="name">
-          Your Name:
-             </label>
+      <form className="new-review" onSubmit={handleSubmit}>
+        <div className="inputGroup">
+          <label htmlFor="name">
+            Your Name:
+          </label>
           <input
             name="reviewerName"
             id="reviewerName"
@@ -72,36 +75,38 @@ const ReviewForm = (props) => {
             onChange={handleChange}
           />
           <p className="errorForm"></p>
-     </div>
+        </div>
+
+
         <div className="inputGroup">
-        <label htmlFor="rating">
-          Rating:
+          <label htmlFor="starRating">
+            Rating:
           </label>
-          <input
-            type="text"
-            name="starRating"
-            id="starRating"
-            value={newReview.starRating}
-            onChange={handleChange}
-          />
-          </div>
+          <select name="starRating" id="starRating" value={newReview.starRating} onChange={handleChange}>
+            <option value="5">5 stars</option>
+            <option value="4">4 stars</option>
+            <option value="3">3 stars</option>
+            <option value="2">2 stars</option>
+            <option value="1">1 star</option>
+          </select>
+        </div>
 
 
-<div className="inputGroup">
-        <label htmlFor="body"><br />
-          Review: <br/>
+        <div className="inputGroup">
+          <label htmlFor="body"><br />
+            Review: <br/>
           </label>
-        <textarea
+          <textarea
             name="body"
             id="body"
-            rows="5" cols="33"
+            rows="5" cols="31"
             value={newReview.body}
             onChange={handleChange}
           />
-          </div>
+        </div>
 
 
-         <div className= "inputGroup">
+        <div className= "inputGroup">
           <input className="button" type="submit" value="Submit Review" />
         </div>
       </form>

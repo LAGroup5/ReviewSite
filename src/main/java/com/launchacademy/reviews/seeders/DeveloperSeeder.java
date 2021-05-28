@@ -51,7 +51,7 @@ public class DeveloperSeeder implements CommandLineRunner {
     developerList.add(steve);
 
     Developer paul = new Developer(
-        "Paul",
+        "Paul Ritzman",
         "https://i.postimg.cc/RhCRS84r/Paul300.jpg",
         "Paul is an experienced software developer,\n"
          +"experienced in automation, and always willing to tackle\n"
