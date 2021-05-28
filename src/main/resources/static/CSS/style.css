@@ -3,14 +3,21 @@
 body {
   width: 100%;
   font-family: "Poppins", sans-serif;
+  background-image: url("https://postimg.cc/MntVjtnp");
 }
 #nav {
+ position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  margin: 0 0 5% 0;
-  padding: 10px;
+  padding: 0 35px;
   background: #ddbea9;
-  list-style: none;
-  animation: navbar-animation 400ms ease-in;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 100;
+  height: 80px;
+  margin:
 }
 
 #nav li {
@@ -29,9 +36,6 @@ body {
   border-color: #230903;
 }
 
-#nav h1 {
-  text-align: center;
-}
 
 .new-review {
   width: 37%;
@@ -111,6 +115,9 @@ textarea {
   text-align: center;
 }
 
+.trails-table{
+padding-top:5%;
+}
 .trail-column-style {
   font-weight: normal;
 }
